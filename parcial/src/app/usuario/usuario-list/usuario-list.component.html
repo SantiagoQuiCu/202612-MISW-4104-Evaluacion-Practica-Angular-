@@ -1,3 +1,43 @@
-<p>
-  usuario-list works!
-</p>
+<main class="container-fluid px-lg-5 py-5">
+
+  <!-- Header -->
+  <div class="row mb-5">
+    <div class="col-12">
+      <h1 class="display-5 fw-bold mb-0">Member Directory</h1>
+    </div>
+  </div>
+  <!-- Profile Grid -->
+  <div class="row g-4">
+    <!-- Card 1 -->
+    <div class="col-12 col-md-6 col-lg-4" *ngFor="let usuario of usuarios">
+      <div class="card profile-card p-4" >
+        <div class="d-flex justify-content-between align-items-start mb-3">
+          <div class="profile-img-container">
+            <img [alt]="usuario.name" [src]="usuario.avatarUrl" />
+          </div>
+          <span class="badge rounded-pill badge-user px-3 py-2">{{usuario.role}}</span>
+        </div>
+        <div class="mb-4">
+          <h3 class="h4 fw-bold mb-1 card-title">{{usuario.name}}</h3>
+          <p class="small text-muted mb-0">{{usuario.userName}}</p>
+        </div>
+        <div class="mb-4">
+          <div class="d-flex align-items-center gap-2 mb-2 text-dark">
+            <img src="icons/mail.svg"/>
+            <span>{{usuario.email}}</span>
+          </div>
+          <div class="d-flex align-items-center gap-2 text-dark">
+            <img src="icons/location.svg"/>
+            <span>{{usuario.location}}</span>
+          </div>
+        </div>
+        <div class="mt-auto pt-3 border-top text-end">
+          <a class="view-profile-link" href="#">
+            <span >View profile</span>
+            <img class="material-symbols-outlined" src="icons/arrow_forward.svg"/>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
