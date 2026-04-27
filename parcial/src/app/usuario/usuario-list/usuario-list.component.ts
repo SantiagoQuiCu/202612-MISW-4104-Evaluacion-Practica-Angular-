@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { Usuario } from '../usuario';
 import { UsuarioService } from '../usuario.service';
 
@@ -11,7 +11,7 @@ import { UsuarioService } from '../usuario.service';
 export class UsuarioListComponent implements OnInit {
   usuarios : Array<Usuario>= [];
 
-  constructor(private usuarioService : UsuarioService) { }
+  constructor( @Inject(UsuarioService) private usuarioService : UsuarioService) { }
 
   getUsuarios():void{
     this.usuarioService.getUsuarios().subscribe((user) =>{
