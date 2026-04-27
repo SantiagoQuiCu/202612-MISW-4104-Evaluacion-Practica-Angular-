@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Parcial</title>
@@ -7,7 +8,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <body>
+  <nav class="navbar navbar-expand-md navbar-light bg-white sticky-top py-2">
+    <div class="container-fluid px-lg-5">
+      <a class="navbar-brand fw-extrabold text-primary" href="#">MISO</a>
+      <button class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-lg-3">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Usuarios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-secondary fw-medium" href="#">Repositorios</a>
+          </li>
+        </ul>
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-link text-secondary p-1 rounded-circle">
+            <span class="material-symbols-outlined">notifications</span>
+          </button>
+          <button class="btn btn-link text-secondary p-1 rounded-circle">
+            <span class="material-symbols-outlined">settings</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
   <app-root></app-root>
 </body>
+
 </html>
