@@ -1,6 +1,6 @@
 export class Usuario {
     id: number;
-    userName: string;
+    username: string;
     name: string;
     email: string;
     avatarUrl: string;
@@ -8,9 +8,9 @@ export class Usuario {
     location: string;
     repoIds: Array<number>;
 
-    constructor( id: number,userName: string, name: string, email: string,avatarUrl: string,role: string,location: string,repoIds:Array<number>){
+    constructor( id: number,username: string, name: string, email: string,avatarUrl: string,role: string,location: string,repoIds:Array<number>){
         this.id =id;
-        this.userName = userName;
+        this.username = username;
         this.name = name;
         this.email = email;
         this.avatarUrl=avatarUrl;

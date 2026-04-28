@@ -1,3 +1,70 @@
-<p>
-  repositorio-detalle works!
-</p>
+<main class="container-fluid px-lg-5 py-5">
+  <div class="card profile-shadow border-0 mb-5">
+    <div class="card-body p-4 p-md-5 position-relative"> <!--card profile-shadow border-0 mb-5-->
+      <div class="row align-items-start g-4">
+        <div class="col-lg-8">
+          <h1 class="display-5 mb-2">{{repositorio.name}}</h1>
+          <p class="lead text-muted mb-4">{{repositorio.description}}</p>
+          <div class="d-flex flex-wrap gap-3">
+            <div class="d-flex align-items-center gap-2 px-3 py-2 bg-light border rounded-3">
+              <span class="rounded-circle bg-primary" style="width: 10px; height: 10px;"></span>
+              <span class="small fw-medium">{{repositorio.language}}</span>
+            </div>
+            <div class="d-flex align-items-center gap-2 px-3 py-2 bg-light border rounded-3">
+              <img src="icons/calendar.svg"/>
+              <span class="material-symbols-outlined text-muted">{{repositorio.createdAt}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 d-flex justify-content-lg-end gap-2">
+          <button class="btn btn-outline-primary px-4 py-2 fw-semibold d-flex align-items-center gap-2">
+            <span class="material-symbols-outlined">⭐ {{repositorio.stars}}</span> 
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Owner Section -->
+  <section>
+    <h2 class="h4 mb-4 px-2">Repository Owner</h2>
+    <div class="card profile-shadow border-0 p-4 p-md-5">
+      <div class="row g-4 align-items-start">
+        <div class="col-auto position-relative">
+          <img [alt]="usuario.name" class="avatar-main"
+            [src]="usuario.avatarUrl" />
+        </div>
+        <div class="col">
+          <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-3">
+            <div>
+              <h3 class="h3 mb-1">{{usuario.name}}</h3>
+              <p class="text-primary fw-medium mb-0">{{usuario.username}}</p>
+            </div>
+            <button class="btn btn-primary px-4">{{usuario.role}}</button>
+          </div>
+          <div class="row g-4">
+            <div class="col-sm-6">
+              <div class="d-flex align-items-center gap-3">
+                <img src="icons/location.svg" />
+                <div>
+                  <p class="mb-0 fw-medium">{{usuario.location}}</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+            </div>
+            <div class="col-sm-6">
+              <div class="d-flex align-items-center gap-3">
+                <img src="icons/mail.svg" />
+                <div>
+                  <p class="mb-0 fw-medium">{{usuario.email}}</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
