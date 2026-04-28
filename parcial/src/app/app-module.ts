@@ -1,10 +1,11 @@
 import { NgModule, provideBrowserGlobalErrorListeners, provideZoneChangeDetection} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing-module';
+import { AppRoutingModule, routes} from './app-routing-module';
 import { App } from './app';
 import { UsuarioModule } from './usuario/usuario.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RepositorioModule } from './repositorio/repositorio.module';
+import { provideRouter, withComponentInputBinding } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { RepositorioModule } from './repositorio/repositorio.module';
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideZoneChangeDetection({eventCoalescing: true})
+    provideZoneChangeDetection({eventCoalescing: true}),
+    provideRouter(routes, withComponentInputBinding())
   ],
   bootstrap: [App]
 })
