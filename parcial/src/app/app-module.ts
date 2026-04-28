@@ -1,6 +1,5 @@
 import { NgModule, provideBrowserGlobalErrorListeners, provideZoneChangeDetection} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { UsuarioModule } from './usuario/usuario.module';
