@@ -1,0 +1,21 @@
+<div class="repositorio mb-4 p-3" *ngFor="let repositorio of repositorios">
+  <div class="mb-4" >
+    <div class="d-flex justify-content-between align-items-center mb-2">
+      <h3 class="repo-title">{{repositorio.name}}</h3>
+      <span class="badge-stars d-flex align-items-center gap-1">⭐ {{repositorio.stars}} </span>
+    </div>
+    <p class="mb-0 text-muted"> {{repositorio.description}}</p>
+  </div>
+  <div>
+    <div class="d-flex flex-wrap gap-3 mb-3 text-muted small fw-medium justify-content-between">
+      <div class="d-flex align-items-center gap-1">
+        <img src="icons/code.svg" />
+        <span class="material-symbols-outlined fs-6">{{repositorio.language}}</span>
+      </div>
+      <div class="d-flex align-items-center gap-1">
+        <img src="icons/calendar.svg" />
+        <span class="material-symbols-outlined fs-6">{{repositorio.createdAt}}</span>
+      </div>
+    </div>
+  </div>
+</div>

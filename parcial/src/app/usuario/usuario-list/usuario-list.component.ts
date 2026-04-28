@@ -10,6 +10,7 @@ import { UsuarioService } from '../usuario.service';
 })
 export class UsuarioListComponent implements OnInit {
   usuarios : Array<Usuario>= [];
+  usuarioSelect: {[key:number]:Usuario}={}
 
   constructor( @Inject(UsuarioService) private usuarioService : UsuarioService) { }
 
@@ -19,6 +20,10 @@ export class UsuarioListComponent implements OnInit {
       console.log(this.usuarios);
 
     });
+  }
+
+  getUsuario(usuario:Usuario,i:number):void{
+    this.usuarioSelect[i]=usuario;
   }
 
   ngOnInit() {

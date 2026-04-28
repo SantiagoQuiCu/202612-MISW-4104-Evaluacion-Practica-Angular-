@@ -7,10 +7,10 @@
     </div>
   </div>
   <!-- Profile Grid -->
-  <div class="row g-4">
+  <div class="row row-cols-3 aling-items-start g-4">
     <!-- Card 1 -->
-    <div class="col-12 col-md-6 col-lg-4" *ngFor="let usuario of usuarios">
-      <div class="card profile-card p-4" >
+    <div class="col " *ngFor="let usuario of usuarios;let i = index">
+      <div class="card profile-card p-4 flex-grow-0">
         <div class="d-flex justify-content-between align-items-start mb-3">
           <div class="profile-img-container">
             <img [alt]="usuario.name" [src]="usuario.avatarUrl" />
@@ -23,18 +23,21 @@
         </div>
         <div class="mb-4">
           <div class="d-flex align-items-center gap-2 mb-2 text-dark">
-            <img src="icons/mail.svg"/>
+            <img src="icons/mail.svg" />
             <span>{{usuario.email}}</span>
           </div>
           <div class="d-flex align-items-center gap-2 text-dark">
-            <img src="icons/location.svg"/>
+            <img src="icons/location.svg" />
             <span>{{usuario.location}}</span>
           </div>
         </div>
-        <div class="mt-auto pt-3 border-top text-end">
-          <a class="view-profile-link" href="#">
-            <span >View profile</span>
-            <img class="material-symbols-outlined" src="icons/arrow_forward.svg"/>
+        <div class="collapse mb-4 p-3" [id]="'verdetalle'+i">
+          <app-usuario-detalle [UsuarioDetalle]= "usuarioSelect[i]"> </app-usuario-detalle>
+        </div>
+        <div class="mt-4 pt-3 border-top d-flex justify-content-center">
+          <a class="view-profile-link p-auto" [attr.data-bs-target]="'#verdetalle'+i" data-bs-toggle="collapse" role="button" (click)="getUsuario(usuario,i)">
+            <span>Ver detalle</span>
+            <img class="material-symbols-outlined" src="icons/keydown.svg" />
           </a>
         </div>
       </div>
