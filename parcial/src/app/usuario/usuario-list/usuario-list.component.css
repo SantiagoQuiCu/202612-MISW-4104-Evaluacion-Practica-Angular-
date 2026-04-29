@@ -4,12 +4,10 @@
     box-shadow: 0 10px 30px -15px rgba(13, 110, 253, 0.12);
     transition: all 0.3s ease;
 }
-
 .profile-card:hover {
     box-shadow: 0 20px 40px -12px rgba(13, 110, 253, 0.2);
     transform: translateY(-2px);
 }
-
 .profile-img-container {
     width: 64px;
     height: 64px;
@@ -17,19 +15,15 @@
     overflow: hidden;
     border: 2px solid #dae2ff;
 }
-
 .profile-img-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
-
 .badge-user {
     background-color: #dae2ff;
     color: #001946;
 }
-
 .view-profile-link {
     text-decoration: none;
     font-weight: 600;
@@ -38,49 +32,16 @@
     transition: transform 0.2s ease;
 
 }
-
-
 .view-profile-link:hover {
     text-decoration: underline;
     text-underline-offset: 4px;
     transform: translatey(4px);
 }
-
-
-
-
-
 .rotate {
     transform: rotate(180deg);
     transition: transform 0.3s ease;
 }
 
 
-.avatar-topbar {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border: 1px solid #c2c6d8;
-}
 
-.repositorio {
-    border: 1px solid #dee2e6;
-    border-radius: 0.75rem;
-    box-shadow: 0 10px 30px -15px rgba(13, 110, 253, 0.12);
-}
 
-.repo-title {
-    color: var(--bs-primary);
-    font-weight: 600;
-    font-size: 1.35rem;
-    margin-bottom: 0;
-}
-
-.badge-stars {
-    color: var(--on-tertiary-fixed);
-    font-size: 0.875rem;
-    font-weight: 500;
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.25rem;
-    border: 1px solid var(--tertiary-fixed);
-}

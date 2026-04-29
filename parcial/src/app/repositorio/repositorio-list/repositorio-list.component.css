@@ -42,37 +42,3 @@
      border-color: var(--bs-primary);
      color: white;
  }
-
- .btn-primary {
-     background-color: var(--bs-primary);
-     border-color: var(--bs-primary);
-     font-weight: 600;
- }
-
- .text-secondary-custom {
-     color: #575f67;
- }
-
- .avatar-img {
-     width: 32px;
-     height: 32px;
-     border-radius: 50%;
-     border: 1px solid var(--outline-variant);
- }
-
- .icon-btn {
-     padding: 0.5rem;
-     border-radius: 0.375rem;
-     color: #6c757d;
-     transition: all 0.15s ease-in-out;
-     background: transparent;
-     border: none;
- }
-
- .icon-btn:hover {
-     background-color: #f8f9fa;
- }
-
- .icon-btn:active {
-     transform: scale(0.95);
- }

@@ -2,8 +2,11 @@
       --bs-primary: #0057cd;
       --bs-primary-rgb: 0, 87, 205;
       --surface-container-lowest: #ffffff;
+      --surface: #f7f9ff;
+      --on-surface: #181c20;
       --on-surface-variant: #424655;
       --outline-variant: #c2c6d8;
+      --tertiary: #555f6b;
       --tertiary-fixed: #d9e3f1;
       --on-tertiary-fixed: #131c26;
   }
