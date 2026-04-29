@@ -35,9 +35,9 @@
           <app-usuario-detalle [UsuarioDetalle]= "usuarioSelect[i]"> </app-usuario-detalle>
         </div>
         <div class="mt-4 pt-3 border-top d-flex justify-content-center">
-          <a class="view-profile-link p-auto" [attr.data-bs-target]="'#verdetalle'+i" data-bs-toggle="collapse" role="button" (click)="getUsuario(usuario,i)">
+          <a class="view-profile-link p-auto" [attr.data-bs-target]="'#verdetalle'+i" data-bs-toggle="collapse" role="button" (click)="getUsuario(usuario,i)" >
             <span>Ver detalle</span>
-            <img class="material-symbols-outlined" src="icons/keydown.svg" />
+            <img class="material-symbols-outlined " [class.rotate]="rotate[i]" src="icons/keydown.svg" />
           </a>
         </div>
       </div>

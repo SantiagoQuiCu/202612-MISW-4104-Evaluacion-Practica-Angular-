@@ -12,6 +12,8 @@ export class UsuarioListComponent implements OnInit {
   usuarios : Array<Usuario>= [];
   usuarioSelect: {[key:number]:Usuario}={}
 
+  rotate :{[key:number]:boolean}={};
+
   constructor( @Inject(UsuarioService) private usuarioService : UsuarioService) { }
 
   getUsuarios():void{
@@ -24,6 +26,9 @@ export class UsuarioListComponent implements OnInit {
 
   getUsuario(usuario:Usuario,i:number):void{
     this.usuarioSelect[i]=usuario;
+    this.rotate[i] = !this.rotate[i];
+    console.log(this.rotate);
+
   }
 
   ngOnInit() {

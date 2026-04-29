@@ -46,9 +46,13 @@
     transform: translatey(4px);
 }
 
-.view-profile-link .material-symbols-outlined {
-    font-size: 1rem;
 
+
+
+
+.rotate {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
 }
 
 
